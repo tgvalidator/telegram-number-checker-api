@@ -3,6 +3,15 @@ info:
   title: Telegram Number Checker API
   version: 1.0.0
   description: Check Telegram registration for one phone number or up to 100 numbers synchronously.
+  contact:
+    name: TG Validator
+    url: https://tgvalidator.com/products/tg
+  license:
+    name: MIT
+    url: https://opensource.org/license/mit
+externalDocs:
+  description: TG Validator API documentation
+  url: https://tgvalidator.com/api-docs
 servers:
   - url: https://tgvalidator.com
 security:

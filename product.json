@@ -2,6 +2,8 @@
   "name": "Telegram Number Checker API",
   "brand": "TG Validator",
   "repository": "tgvalidator/telegram-number-checker-api",
+  "description": "Synchronous single and batch Telegram registration checks for E.164 phone numbers.",
+  "official_site": "https://tgvalidator.com",
   "landing_page": "https://tgvalidator.com/products/tg",
   "canonical_docs": "https://tgvalidator.com/api-docs",
   "base_url": "https://tgvalidator.com",
@@ -29,5 +31,7 @@
     }
   ],
   "pricing_url": "https://tgvalidator.com/pricing",
-  "last_reviewed": "2026-08-17"
+  "maintainer": "TG Validator",
+  "license": "MIT",
+  "last_reviewed": "2026-08-18"
 }
