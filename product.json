@@ -1,0 +1,33 @@
+{
+  "name": "Telegram Number Checker API",
+  "brand": "TG Validator",
+  "repository": "tgvalidator/telegram-number-checker-api",
+  "landing_page": "https://tgvalidator.com/products/tg",
+  "canonical_docs": "https://tgvalidator.com/api-docs",
+  "base_url": "https://tgvalidator.com",
+  "auth": {
+    "type": "api_key",
+    "header": "X-API-Key"
+  },
+  "mode": "sync-batch",
+  "endpoints": {
+    "single": { "method": "POST", "path": "/api/v1/check" },
+    "batch": { "method": "POST", "path": "/api/v1/batch-check", "min_items": 1, "max_items": 100 },
+    "balance": { "method": "GET", "path": "/api/v1/balance" }
+  },
+  "limits": { "numbers_per_utc_minute": 200, "concurrent_checks": 5, "concurrent_batches": 1 },
+  "products": [
+    {
+      "type": "tg",
+      "name": "Telegram Registration Check",
+      "inputKind": "phone",
+      "fields": [
+        "service_type",
+        "identifier",
+        "registered"
+      ]
+    }
+  ],
+  "pricing_url": "https://tgvalidator.com/pricing",
+  "last_reviewed": "2026-08-17"
+}

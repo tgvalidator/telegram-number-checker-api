@@ -1,0 +1,13 @@
+# Telegram Number Checker API
+
+> Check Telegram registration for one phone number or up to 100 numbers synchronously.
+
+Official landing page: https://tgvalidator.com/products/tg
+Documentation: https://tgvalidator.com/api-docs
+API base: https://tgvalidator.com
+Authentication: X-API-Key
+Products: tg
+Examples: Python, Node.js, Go, Java, C#, PHP, JavaScript, Shell
+Pricing: https://tgvalidator.com/pricing
+
+Use JSON `POST /api/v1/check` for one E.164 phone number or `POST /api/v1/batch-check` for 1–100 numbers. Both use `service_type=tg`. Batch results preserve input order; `exists=false` is undetermined and `registered` is then absent. Limits: 200 submitted numbers per UTC minute, 5 concurrent checks, one batch at a time. `GET /api/v1/balance` returns `balance_micros`. Server examples read `TGVALIDATOR_API_KEY`.
