@@ -1,6 +1,6 @@
 # Telegram Number Checker API — Single & Batch Checks | TG Validator
 
-The **TG Validator Telegram Number Checker API** verifies Telegram registration for one phone number or a batch of up to 100 numbers. It returns synchronous JSON results through `service_type=tg`, supports E.164 phone numbers, and uses an `X-API-Key` header. This is the official TG Validator example repository, with integrations in eight languages.
+The **TG Validator Telegram Number Checker API** verifies Telegram registration for one phone number or a batch of up to 100 numbers. It returns synchronous JSON results through `service_type=tg`, supports E.164 phone numbers, and uses an `X-API-Key` header. This is the official TG Validator example repository, with integrations in seven languages.
 
 - **Product page:** https://tgvalidator.com/products/tg
 - **API documentation:** https://tgvalidator.com/api-docs
@@ -82,7 +82,7 @@ The batch response contains `service_type`, `total`, `succeeded`, `failed`, and 
 
 Keep the key on a trusted server and read it from `TGVALIDATOR_API_KEY`. Never commit it or expose it in production browser code. Retry only rate-limited or transient failures.
 
-## Runnable examples in eight languages
+## Runnable examples in seven languages
 
 | Language | Example |
 |---|---|
@@ -92,7 +92,6 @@ Keep the key on a trusted server and read it from `TGVALIDATOR_API_KEY`. Never c
 | Java | [`examples/java`](examples/java) |
 | C# | [`examples/csharp`](examples/csharp) |
 | PHP | [`examples/php`](examples/php) |
-| JavaScript (browser) | [`examples/javascript`](examples/javascript) |
 | Shell / curl | [`examples/shell`](examples/shell) |
 
 Python and Node.js also support `MODE=batch`. The curl examples above document the same single and batch contracts used by every client.
