@@ -6,7 +6,7 @@ The **TG Validator Telegram Number Checker API** verifies Telegram registration 
 - **API documentation:** https://tgvalidator.com/api-docs
 - **API base URL:** `https://tgvalidator.com`
 - **Authentication:** `X-API-Key`
-- **Get an API key:** https://tgvalidator.com/register
+- **Get an API key:** https://tgvalidator.com/register?utm_source=github&utm_medium=referral&utm_campaign=tgvalidator_telegram-number-checker-api
 
 ## What does the TG Validator Telegram Number Checker verify?
 
@@ -114,7 +114,7 @@ See the [TG Validator pricing page](https://tgvalidator.com/pricing). This repos
 
 - **Product:** https://tgvalidator.com/products/tg
 - **Documentation:** https://tgvalidator.com/api-docs
-- **Registration:** https://tgvalidator.com/register
+- **Registration:** https://tgvalidator.com/register?utm_source=github&utm_medium=referral&utm_campaign=tgvalidator_telegram-number-checker-api
 - **Pricing:** https://tgvalidator.com/pricing
 - **OpenAPI contract:** [`openapi.yaml`](openapi.yaml)
 - **License:** [MIT](LICENSE) for the sample code
@@ -123,4 +123,8 @@ Use this API only for identifiers you are authorized to process and comply with 
 
 ---
 
-*Last reviewed: 2026-08-18 · Maintained by TG Validator. Canonical product page: https://tgvalidator.com/products/tg*
+*Last reviewed: 2026-10-30 · Maintained by TG Validator. Canonical product page: https://tgvalidator.com/products/tg*
+
+## Current response and timeout contract
+
+Result fields are directly in `data`: `service_type`, `identifier`, `registered`, `banned`. Internal `provider`/`profile_available` are not returned. `banned=null` means unknown, not false. For ordered batches, `exists=false` means undetermined; never classify it as a negative. Python and Node.js select `MODE=single` (default) or `MODE=batch`; their client timeout defaults to 60 / 330 seconds and is configurable via `REQUEST_TIMEOUT_SECONDS`. The server batch window is 300 seconds. Do not blindly repeat a potentially billed request after an uncertain timeout. The default budget is five in-flight requests and one synchronous batch.
